@@ -1,13 +1,12 @@
 <script context="module" lang="ts">
-  import { initFirebase } from 'sveltefirets';
-  import { firebaseConfig } from '$lib/firebaseConfig';
-  import type { Load } from '@sveltejs/kit';
-  export const load: Load = async () => {
-    const firebaseApp = initFirebase(firebaseConfig);
-		console.log({ firebaseApp });
-		console.log('layout here');
-    return { stuff: { firebaseApp } };
-  };
+	import { initFirebase } from 'sveltefirets';
+	import { firebaseConfig } from '$lib/firebaseConfig';
+	import type { Load } from '@sveltejs/kit';
+	export const load: Load = async () => {
+		const firebaseApp = initFirebase(firebaseConfig);
+		console.log(`layout init: ${firebaseApp.options.projectId}`);
+		return { stuff: { firebaseApp } };
+	};
 </script>
 
 <slot />
