@@ -21,7 +21,7 @@ const config = {
 			},
 			optimizeDeps: {
 				// exclude: ['firebase'],
-				include: ['sveltefirets'],
+				// include: ['sveltefirets'],
 				// include: ['sveltefirets', 'firebase'],
 			},
 		}
