@@ -14,8 +14,8 @@ const config = {
 		target: '#svelte',
 		vite: {
 			ssr: {
-				external: ['firebase'],
-				noExternal: ['sveltefirets'],
+				// external: ['firebase'],
+				noExternal: ['sveltefirets', 'firebase'],
 			}
 		}
 	}
