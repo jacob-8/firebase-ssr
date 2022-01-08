@@ -1,4 +1,6 @@
-# Firebase test
+# Firebase SSR Using SvelteFireTS bug repro
+
+
 
 ## Repo visualization
 

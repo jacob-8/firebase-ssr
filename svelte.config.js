@@ -13,10 +13,17 @@ const config = {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 		vite: {
+			// None of the following configurations or combos of them (that I have tried) seem to work on both local dev and Vercel
 			ssr: {
 				// external: ['firebase'],
-				noExternal: ['sveltefirets', 'firebase'],
-			}
+				noExternal: ['sveltefirets'], 
+				// noExternal: ['sveltefirets', 'firebase'],
+			},
+			optimizeDeps: {
+				// exclude: ['firebase'],
+				include: ['sveltefirets'],
+				// include: ['sveltefirets', 'firebase'],
+			},
 		}
 	}
 };
